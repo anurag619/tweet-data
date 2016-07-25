@@ -71,6 +71,7 @@
   height: 220px;
   border: 1px dashed #888;
   border-radius: 20px;
+
 }
 
 .popse-header{
@@ -86,6 +87,7 @@
 .popse-tweet{
 
   padding: 10px;
+  overflow: scroll;
 }
 
 
