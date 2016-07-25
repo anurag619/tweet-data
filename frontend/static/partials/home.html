@@ -1,0 +1,20 @@
+
+
+<div class="jumbotron">
+
+    <div class="search">
+
+        <oi-select oi-options="item.name for item in all_trends"
+            ng-model="bundle" multiple>
+        </oi-select>
+
+        <div class="search-btn">
+            <button type="button" class="btn btn-primary " ng-click="getTrends()">Search</button>
+        </div>
+
+    </div>
+
+    <div class="trends"><h4 class="trend">Trending:</h4>
+        <p ng-repeat="i in hashes track by $index"> {{i}},</p>
+    </div>
+  </div>
