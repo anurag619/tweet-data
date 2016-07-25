@@ -41,6 +41,8 @@
 	margin: 20px 0px;
 }
 
+
+
 .images-active, .graph-active {
   background: #888;
 
@@ -52,7 +54,10 @@
 
 .all_img{
   height: 180px;
+  cursor: pointer; 
 }
+
+
 
 
 /* ---- overriding hover property ---- */

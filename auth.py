@@ -82,7 +82,7 @@ def get_oauth():
 @app.route('/')
 def home():
     
-    return redirect('/dashboard#/index/home')
+    return redirect('/dashboard#/home')
 
 
 @app.route('/dashboard')
