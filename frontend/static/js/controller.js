@@ -61,7 +61,7 @@ tweetController.controller('appctrl', ['$scope','$state','$stateParams','$rootSc
 
 
 
-tweetController.controller('viewctrl', ['$scope','$state','$stateParams','$rootScope', '$localStorage','$location','imagesData','ngDialog', function(a,state,stateParams,rootScope, localStorage,location,imagesData,ngDialog){
+tweetController.controller('viewctrl', ['$scope','$state','$stateParams','$rootScope', '$localStorage','$location','imagesData', function(a,state,stateParams,rootScope, localStorage,location,imagesData){
 
     var variant_urls = location.url().match(/view\/(\S+)/);
     a.allImages = [];

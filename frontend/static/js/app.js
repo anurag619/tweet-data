@@ -6,7 +6,6 @@ var tweet = angular.module('tweet', [
 	'tweetController',
 	'tweetServices',
 	'ngStorage',
-	'ngDialog',
 	'oi.select']);
 
 tweet.config(function($stateProvider, $urlRouterProvider,$httpProvider,$urlRouterProvider,$locationProvider,$sceProvider,cfpLoadingBarProvider){
