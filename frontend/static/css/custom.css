@@ -1,5 +1,8 @@
 
 
+body{
+  background-color: #edecec;
+}
 
 .head{
 	margin-bottom: 50px;
@@ -97,8 +100,178 @@
 
 
 
+.card {
+    position: relative;
+    background: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+}
+
+.card .card-header {
+    position: relative;
+}
+
+.card .card-header h2 {
+    margin: 0;
+    line-height: 100%;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.chart-edge {
+    margin: 20px -8px 0 -10px;
+    overflow: hidden;
+}
+
+.main-graph{
+  padding: 20px;
+}
+
+.card .card-header.ch-alt:not([class*="bgm-"]) {
+    background-color: #f7f7f7;
+}
+.card .card-header {
+    position: relative;
+}
+.m-b-20 {
+    margin-bottom: 20px !important;
+}
+.listview {
+    position: relative;
+}
+.listview:not(.lv-lg):not(.lv-message) .lv-item {
+    padding: 10px 20px;
+}
+.listview .lv-item {
+    position: relative;
+    display: block;
+    -webkit-transition: background-color;
+    -o-transition: background-color;
+    transition: background-color;
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms;
+}
+.media:first-child {
+    margin-top: 0;
+}
+.media > .pull-left {
+    padding-right: 15px;
+}
+.listview .lv-img-sm {
+    width: 35px;
+    height: 35px;
+}
+.listview [class*="lv-img"] {
+    border-radius: 50%;
+}
+.media-body {
+    zoom: 1;
+    display: block;
+    width: auto;
+}
+.listview:not(.lv-message) .lv-title {
+    color: #000;
+}
+.listview .lv-item .lv-small {
+    font-size: 12px;
+    color: #A9A9A9;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    width: 100%;
+}
+.media-body {
+    display: table-cell;
+    vertical-align: top;
+}
+.listview:not(.lv-lg):not(.lv-message) .lv-item {
+    padding: 10px 20px;
+}
+
+.listview{
+  overflow-y: scroll;
+  max-height: 300px; 
+}
+.no-pad{
+  padding: 1px !important;
+}
+
+.tweet-body{
+   
+    white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+     white-space: -pre-wrap;      /* Opera 4-6 */
+     white-space: -o-pre-wrap;    /* Opera 7 */
+     white-space: pre-wrap;       /* css-3 */
+     word-wrap: break-word;       /* Internet Explorer 5.5+ */
+     word-break: break-all;
+     white-space: normal; 
+     color: #000;
+}
+
+.tweet-body-parent{
+   width: 900px !important;
+}
+
+.lv-header-alt {
+    position: relative;
+    background: #f8f8f8;
+    padding: 15px;
+}
+
+.lvh-label {
+    color: #818181;
+    display: inline-block;
+    margin: 0;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 0 6px;
+    line-height: 33px;
+    vertical-align: middle;
+    float: left;
+}
+
+@media screen and (min-width: 768px)
+.card .card-body.card-padding {
+    padding: 23px 26px;
+}
+
+.photos {
+    margin: 2px 0 0;
+}
+.photos:not(.p-timeline) [data-src] {
+    padding: 3px;
+    -webkit-transition: all;
+    -o-transition: all;
+    transition: all;
+    -webkit-transition-duration: 150ms;
+    transition-duration: 150ms;
+}
+
+@media (min-width: 992px){
+  .col-md-2 {
+      width: 16.66666667%;
+  }
+}
 
 
+
+
+
+
+
+@media screen and (min-width: 768px){
+
+  .card .card-header:not(.ch-alt) {
+      padding: 23px 25px;
+  }
+
+  .card .card-header.ch-alt {
+    padding: 23px 26px;
+  }
+
+
+}
 
 
 /* ---- grid ---- */

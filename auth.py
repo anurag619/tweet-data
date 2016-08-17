@@ -122,25 +122,24 @@ def images():
             tempDict['statuses_count'] = result['statuses'][i]['user']['statuses_count']
             tempDict['location'] = result['statuses'][i]['user']['location']
             tempDict['source'] = result['statuses'][i]['source']
-            tempDict['hashtag'] = search_term
+            tempDict['hashtag'] = search_term;
+            tempDict['profile_image'] = result['statuses'][i]['user']['profile_image_url'];
+            tempDict['name'] = result['statuses'][i]['user']['name'];
+
 
             if('media' in result['statuses'][i]['entities']):
+
                 tempDict['media_url'] = result['statuses'][i]['entities']['media'][0]['media_url']
                 tempDict['media_size'] = 'big'
                
-
                 if('user_mentions' in result['statuses'][i]['entities']):
                     tempDict['user_mentions'] = len(result['statuses'][i]['entities']['user_mentions'])
-
-                
-
             else:
                 tempDict['media_url'] = result['statuses'][i]['user']['profile_image_url']
                 tempDict['media_size'] = 'sm'
                 #pass
 
             tempArr.append(tempDict)
-
 
     return json.dumps({'data': tempArr})
 

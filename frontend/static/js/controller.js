@@ -22,14 +22,11 @@ tweetController.controller('appctrl', ['$scope','$state','$stateParams','$rootSc
   a.hashes = [];
   var querySelector = [];
   var queryParams = {};
-  var str = ''
-
- 
+  var str = '';
 
    trendsData.query().then(function (get_list) {
 
       for(var i=0;i<get_list.response.data[0].trends.length;i++){
-
         a.all_trends.push(get_list.response.data[0].trends[i])
 
       }
