@@ -163,13 +163,6 @@ tweetController.controller('viewctrl', ['$scope','$state','$stateParams','$rootS
     });
 
 
-    a.clickToOpen = function () {
-        ngDialog.open({ template: 'static/partials/modal.html', className: 'ngdialog-theme-default' });
-    };
-
-     
-
-
      a.popover = function(){
 
       this.popoverIsVisible = true;

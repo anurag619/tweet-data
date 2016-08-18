@@ -4,6 +4,7 @@ from requests_oauthlib import OAuth1
 from urlparse import parse_qs
 import urllib
 import json
+import datetime
 
 
 import os, sys
@@ -115,9 +116,15 @@ def images():
         hashtag = urllib.unquote(parameter[key])
 
         for i in range(0,len(result['statuses'])):
+
+            date = (datetime.datetime.strptime( result['statuses'][i]['created_at'], '%a %b %d %H:%M:%S +%f %Y' ))
+
+            print date
+
             tempDict={}
 
             tempDict['tweet'] = result['statuses'][i]['text']
+            tempDict['date'] = str(date).split(' ')[0]
             tempDict['followers_count'] = result['statuses'][i]['user']['followers_count']
             tempDict['statuses_count'] = result['statuses'][i]['user']['statuses_count']
             tempDict['location'] = result['statuses'][i]['user']['location']

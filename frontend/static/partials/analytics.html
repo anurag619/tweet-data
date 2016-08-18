@@ -108,12 +108,15 @@
 
 	                        <a class="lv-item" ng-repeat="j in allData track by $index">
 	                            <div class="media row">
-	                                <div class="pull-left col-sm-1 no-pad">
+	                                <div class="pull-left col-sm-1 no-pad" style="text-align:center;">
 	                                    <img class="lv-img-sm" src="{{j.profile_image}}" alt="">
 	                                </div>
-	                                <div class="media-body col-sm-11 tweet-body-parent no-pad">
+	                                <div class="media-body col-sm-10 tweet-body-parent no-pad">
 	                                    <span class="lv-title">{{j.name}}- </span>
 	                                    <span class="tweet-body">{{j.tweet}} </span>
+	                                </div>
+	                                <div class="col-sm-1 tweet-date">
+	                                	<span>{{j.date}}</span>
 	                                </div>
 	                            </div>
 	                        </a>
