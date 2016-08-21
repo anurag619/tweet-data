@@ -210,7 +210,9 @@ body{
 }
 
 .tweet-body-parent{
-   width: 900px !important;
+    width: 900px !important;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px !important;
 }
 
 .lv-header-alt {

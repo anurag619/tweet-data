@@ -1,18 +1,5 @@
 
 
-
-
-	<!-- <div class="btn-group btn-group-justified ab-heading" role="group">
-
-		<div class="btn-group" role="group">
-			<button ng-class="{'images-active': _images == true }" ng-click="switchStats('_images')" type="button" class="btn btn-default heading-name">Images</button>
-		</div>
-		<div class="btn-group" role="group">
-			<button ng-class="{'graph-active': _graph == true }" ng-click="switchStats('graph')" type="button" class="btn btn-default heading-name">Analysis</button>
-		</div>
-
-	</div> -->
-
 	<div class="report">		
 
 			<!-- <div ng-repeat="j in allData track by $index">
@@ -106,20 +93,39 @@
 	                <div class="card-body">
 	                    <div class="listview">
 
-	                        <a class="lv-item" ng-repeat="j in allData track by $index">
+	                        <div class="lv-item" ng-repeat="j in allData track by $index">
 	                            <div class="media row">
+
 	                                <div class="pull-left col-sm-1 no-pad" style="text-align:center;">
 	                                    <img class="lv-img-sm" src="{{j.profile_image}}" alt="">
 	                                </div>
+
 	                                <div class="media-body col-sm-10 tweet-body-parent no-pad">
 	                                    <span class="lv-title">{{j.name}}- </span>
 	                                    <span class="tweet-body">{{j.tweet}} </span>
 	                                </div>
+
 	                                <div class="col-sm-1 tweet-date">
-	                                	<span>{{j.date}}</span>
+	                                	<a target="_blank"><button class="btn primary" ng-click="showTweet(j.screen_name, j.id )" >View</button></a>
+	                                	
 	                                </div>
 	                            </div>
-	                        </a>
+	                            <div class="row" style="margin-left: 100px; text-align:center;">
+
+	                            	<div ng-if="j.location" class="col-md-3" style="border-right: 1px #ddd solid; border-bottom: 1px #ddd solid; padding: 5px;">
+	                            		<i class="fa fa-location-arrow" aria-hidden="true"></i>{{j.location}}
+
+	                            	</div>
+	                            	<div class="col-md-2" style="border-bottom: 1px solid #ddd; border-right:1px #ddd solid; padding: 5px;">
+	                            		<span>{{j.date}}</span>
+	                            	</div>
+	                            	<div class="col-md-2" style="border-bottom: 1px solid #ddd; border-left:1px #ddd solid; padding: 5px;">
+	                            		<span><i class="fa fa-heart-o" aria-hidden="true"></i> {{j.favourites_count}}</span>
+	                            	</div>
+
+
+	                            </div>
+	                        </div>
 	                        
 	                       <!--  <a class="lv-footer" href="">View All</a> -->
 	                    </div>

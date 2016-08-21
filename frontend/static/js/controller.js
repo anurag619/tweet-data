@@ -58,7 +58,7 @@ tweetController.controller('appctrl', ['$scope','$state','$stateParams','$rootSc
 
 
 
-tweetController.controller('viewctrl', ['$scope','$state','$stateParams','$rootScope', '$localStorage','$location','imagesData', function(a,state,stateParams,rootScope, localStorage,location,imagesData){
+tweetController.controller('viewctrl', ['$scope','$state','$stateParams','$rootScope', '$localStorage','$location','imagesData','$window' , function(a,state,stateParams,rootScope, localStorage,location,imagesData,window){
 
     var variant_urls = location.url().match(/view\/(\S+)/);
     a.allImages = [];
@@ -174,24 +174,13 @@ tweetController.controller('viewctrl', ['$scope','$state','$stateParams','$rootS
     };
 
 
-    a.switchStats = function(val){
+    a.showTweet = function(name, id){
 
-        if(val == '_images'){
-            a._images = true;
-            a._graph = false;
+      window.open('https://www.twitter.com/'+name+'/status/'+id, '_blank');
 
-        }
-        else{
-          a._images = false;
-            a._graph = true;
-
-            chart.load({
-              columns: [a.hashtag, a.followers_count ]
-            });
-
-        }
     }
-  
+
+
     if(a._images){
 
       var grid = document.querySelector('.grid');

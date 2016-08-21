@@ -124,13 +124,18 @@ def images():
             tempDict={}
 
             tempDict['tweet'] = result['statuses'][i]['text']
+            tempDict['id'] = result['statuses'][i]['id_str']
             tempDict['date'] = str(date).split(' ')[0]
+            tempDict['location'] = result['statuses'][i]['user']['location']
+            tempDict['location'] = result['statuses'][i]['user']['location']
+            tempDict['favourites_count'] = result['statuses'][i]['user']['favourites_count']
             tempDict['followers_count'] = result['statuses'][i]['user']['followers_count']
             tempDict['statuses_count'] = result['statuses'][i]['user']['statuses_count']
             tempDict['location'] = result['statuses'][i]['user']['location']
             tempDict['source'] = result['statuses'][i]['source']
             tempDict['hashtag'] = search_term;
             tempDict['profile_image'] = result['statuses'][i]['user']['profile_image_url'];
+            tempDict['screen_name'] = result['statuses'][i]['user']['screen_name'];
             tempDict['name'] = result['statuses'][i]['user']['name'];
 
 
