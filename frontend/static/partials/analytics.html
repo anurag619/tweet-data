@@ -105,21 +105,21 @@
 	                                    <span class="tweet-body">{{j.tweet}} </span>
 	                                </div>
 
-	                                <div class="col-sm-1 tweet-date">
-	                                	<a target="_blank"><button class="btn primary" ng-click="showTweet(j.screen_name, j.id )" >View</button></a>
+	                                <div class="col-sm-1">
+	                                	<a target="_blank"><button class="btn primary btn-show" ng-click="showTweet(j.screen_name, j.id )" >View</button></a>
 	                                	
 	                                </div>
 	                            </div>
-	                            <div class="row" style="margin-left: 100px; text-align:center;">
+	                            <div class="row tweet-details" style="">
 
-	                            	<div ng-if="j.location" class="col-md-3" style="border-right: 1px #ddd solid; border-bottom: 1px #ddd solid; padding: 5px;">
+	                            	<div ng-if="j.location" class="col-md-3 tweet-location">
 	                            		<i class="fa fa-location-arrow" aria-hidden="true"></i>{{j.location}}
 
 	                            	</div>
-	                            	<div class="col-md-2" style="border-bottom: 1px solid #ddd; border-right:1px #ddd solid; padding: 5px;">
+	                            	<div class="col-md-2 tweet-date">
 	                            		<span>{{j.date}}</span>
 	                            	</div>
-	                            	<div class="col-md-2" style="border-bottom: 1px solid #ddd; border-left:1px #ddd solid; padding: 5px;">
+	                            	<div class="col-md-2 tweet-fav">
 	                            		<span><i class="fa fa-heart-o" aria-hidden="true"></i> {{j.favourites_count}}</span>
 	                            	</div>
 

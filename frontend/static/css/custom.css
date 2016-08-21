@@ -236,6 +236,18 @@ body{
 .tweet-date{
   font-size: 12px;
 }
+.tweet-location, .tweet-date, .tweet-fav{
+      border-right: 1px #ddd solid; 
+      border-bottom: 1px #ddd solid; 
+      padding: 5px;
+  }
+ 
+
+
+.tweet-details{
+    margin-left: 100px; 
+    text-align:center;
+}
 
 @media screen and (min-width: 768px)
 .card .card-body.card-padding {
@@ -278,6 +290,35 @@ body{
 
 
 }
+
+@media screen and (max-width: 500px){
+
+  .card-header{
+    padding: 15px;
+  }
+
+  .btn-show{
+    width: 100%;
+  }
+
+  .tweet-details{
+      margin-left: 0px; 
+      margin-right: 0px;
+      text-align:center;
+  }
+  .tweet-body-parent {
+    border-bottom: none;
+   
+}
+  .tweet-location, .tweet-date, .tweet-fav{
+    border: 1px solid #ddd;
+    padding: 10px;
+
+  }
+
+
+}
+
 
 
 /* ---- grid ---- */
