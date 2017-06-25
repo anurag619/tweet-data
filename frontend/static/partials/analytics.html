@@ -1,49 +1,22 @@
 
 
-	<div class="report">		
-
-			<!-- <div ng-repeat="j in allData track by $index">
-
-			  	<div ng-click="popover()" ng-mouseleave="hidePopover()" ng-if="j.media_size == 'big' " class="grid-item grid-item--width2 grid-item--height2">
-
-			  		<div class="popse" ng-show="popoverIsVisible">
-			  			<div class="popse-header">Tweet</div>
-
-			  			<div class="popse-tweet">
-			  				{{j.tweet}}
-			  			</div>
-			  		 </div>
-
-			  		<img class="img-responsive all_img" src="{{j.media_url}}" />
-
-			  	</div>
-			</div> -->
-			  
-			</div>
+	<div class="report">
 
 		<div class="row">
 			<div class="col-sm-12">
-				<div class="card">
+			
+                <div class="images_div"> 
 
-                    <div class="lv-header-alt clearfix">
-                        <h2 class="lvh-label hidden-xs"></h2>   
-                    </div>
-             
-                    <div class="card-body card-padding">                     
-                        <div class="lightbox photos">
-             
-                            <div ng-if="j.media_size == 'big' " class="col-md-2 col-sm-4 col-xs-6" ng-repeat="j in allData track by $index">
+                  	<div class="col-md-3 col-sm-4 col-xs-6 img_div_cont" ng-repeat="j in allData track by $index" ng-if="j.media_size == 'big' ">
 
-                                 <div class="lightbox-item p-item">
-                                     <img class="img-responsive all_img" src="{{j.media_url}}" alt="" />
-                                 </div>
-                            </div>
+                        <div class="gallery">
+                             <img class="img-responsive all_img" src="{{j.media_url}}" alt="" />
                         </div>
-             
-                        <div class="clearfix"></div>
                     </div>
+         
+                    <div class="clearfix"></div>
                 </div>
-
+               
 			</div>
 
 		</div>
@@ -84,7 +57,7 @@
 		<div class="row">
 			<div class="col-sm-12">
 
-				<div class="card">
+				<div class="card tweet_data_div">
 	                <div class="card-header ch-alt m-b-20">
 	                    <h2>Tweets ({{allData.length}})</h2>
 	                   
